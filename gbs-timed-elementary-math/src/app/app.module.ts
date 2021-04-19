@@ -29,12 +29,18 @@ import { MatStepperModule } from '@angular/material/stepper';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { DescriptionComponent } from './description/description.component';
+import { ImportanceComponent } from './importance/importance.component';
+import { MathgameComponent } from './mathgame/mathgame.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavbarComponent,
-    FrontpageComponent
+    FrontpageComponent,
+    DescriptionComponent,
+    ImportanceComponent,
+    MathgameComponent,
   ],
   imports: [
     BrowserModule,

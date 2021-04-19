@@ -8,5 +8,29 @@
 
 .sidenav {
     width: 200px;
-    background-color: aqua;
+    background-color: #3F51B5;
+}
+
+.sidenav .mat-toolbar {
+    background: inherit;
+    margin: auto;
+}
+
+.sidenav-content .span {
+    text-align: center;
+    color: black;
+}
+
+.heading {
+    margin: auto;
+    font-size: 130%;
+}
+
+.heading2 {
+    margin: auto;
+    font-size: 110%;
+}
+
+.navspacing {
+    width:100%;
 }
