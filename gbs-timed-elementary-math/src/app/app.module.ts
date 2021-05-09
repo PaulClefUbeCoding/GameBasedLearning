@@ -21,7 +21,9 @@ import { MatExpansionModule } from '@angular/material/expansion';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatIconModule } from '@angular/material/icon';
 import { MatInputModule } from '@angular/material/input';
+import { MatMenuModule } from '@angular/material/menu';
 import { MatListModule } from '@angular/material/list';
+import { MatDividerModule } from '@angular/material/divider';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSelectModule } from '@angular/material/select';
@@ -32,6 +34,8 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 import { DescriptionComponent } from './description/description.component';
 import { ImportanceComponent } from './importance/importance.component';
 import { MathgameComponent } from './mathgame/mathgame.component';
+import { Mathgamep2Component } from './mathgamep2/mathgamep2.component';
+import { Mathgamep3Component } from './mathgamep3/mathgamep3.component';
 
 @NgModule({
   declarations: [
@@ -41,6 +45,8 @@ import { MathgameComponent } from './mathgame/mathgame.component';
     DescriptionComponent,
     ImportanceComponent,
     MathgameComponent,
+    Mathgamep2Component,
+    Mathgamep3Component,
   ],
   imports: [
     BrowserModule,
@@ -54,6 +60,8 @@ import { MathgameComponent } from './mathgame/mathgame.component';
     MatCheckboxModule,
     MatNativeDateModule,
     MatDatepickerModule,
+    MatDividerModule,
+    MatMenuModule,
     MatChipsModule,
     MatDialogModule,
     MatExpansionModule,

@@ -4,6 +4,7 @@ import { DescriptionComponent } from './description/description.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { ImportanceComponent } from './importance/importance.component';
 import { MathgameComponent } from './mathgame/mathgame.component';
+import { Mathgamep2Component } from './mathgamep2/mathgamep2.component';
 
 const routes: Routes = [
   { 
@@ -22,6 +23,10 @@ const routes: Routes = [
     path: 'mathgame-page',
     component: MathgameComponent,
   },
+  {
+    path: 'mathgame-page2',
+    component: Mathgamep2Component,
+  }
 ];
 
 

@@ -1,1 +1,18 @@
-<p>mathgame works!</p>
+<mat-toolbar color="primary" class="expanded-toolbar">
+    <span>
+        <button mat-button routerLink="/mathgame-page">{{title}}</button>
+        <button mat-button routerLink="/mathgame-page"><mat-icon>home</mat-icon></button>
+    </span>
+    <div fxLayout="row" fxShow="false" fxShow.gt-sm>
+        <button mat-button routerLink="/mathgame-page2">
+            <mat-icon>gamepad</mat-icon>
+            Play
+        </button>
+        <button mat-button routerLink="/">
+            <mat-icon>exit_to_app</mat-icon>
+            Exit
+        </button>
+    </div>
+</mat-toolbar>
+<app-mathgamep2 *ngIf="isViewable"></app-mathgamep2>
+<app-mathgamep3 *ngIf="!isViewable"></app-mathgamep3>
