@@ -7,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MathgameComponent implements OnInit {
 
+  title: string;
+  public isViewable: boolean;
+
   constructor() { }
 
   ngOnInit(): void {
+    this.title = "Chasing Tiger";
+    this.isViewable = true;
+  }
+
+  public toggle(): void {
+    this.isViewable = !this.isViewable;
   }
 
 }
