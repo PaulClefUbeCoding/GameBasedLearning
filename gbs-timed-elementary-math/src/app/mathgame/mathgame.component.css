@@ -3,6 +3,7 @@
 body {
     margin: 0;
     font-family: sans-serif;
+    height: 100%;
 }
 
 h1 {
@@ -58,4 +59,56 @@ body {
 
 .container3 {
     margin: 0 0% 0 0%;
+    display: flex;
+    flex-flow: column;
+    height: 100%;
 }
+
+.page2 {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+}
+
+.page2 h3 {
+    margin: 5% 0 0 0;
+}
+
+.page2 h1 {
+    margin: 5% 0 5% 0;
+}
+
+.page2 button {
+    margin: 2% 0 5% 0;
+}
+
+.hidden1 {
+    visibility: hidden;
+}
+
+input[type="checkbox"]:checked + label:before {
+    background: #fff;
+    color: rgb(40, 212, 83);
+    content: "\2713";
+    text-align: center;
+    margin-right: 5px;
+}
+input[type="checkbox"]:checked + label:after {
+    font-weight: bold;
+}
+
+p {
+ font-size: 20px;
+ font-weight: bold;
+}
+
+.page3 {
+
+}
+
+.page3 h2 {
+    color: #3F51B5;
+}
+
+

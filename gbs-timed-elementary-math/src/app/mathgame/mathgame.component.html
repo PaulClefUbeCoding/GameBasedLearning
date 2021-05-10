@@ -26,9 +26,9 @@
         [stepControl]="formGroup1.get('gameInformation')"
       >
         <ng-template matStepLabel>Game Info</ng-template>
-        <h2 class="mat-display-1" style="margin-bottom: 32px">
+        <h3 class="mat-display-1" style="margin-bottom: 32px">
           Initializing Your Game
-        </h2>
+        </h3>
         <div>
           <mat-form-field appearance="outline" class="mat-input-width">
             <mat-label>Name</mat-label>
@@ -46,7 +46,11 @@
         <div>
           <mat-form-field appearance="outline" class="mat-input-width">
             <mat-label>Number of Digits</mat-label>
-            <mat-select class="options">
+            <mat-select
+              class="options"
+              [(ngModel)]="selectedDigit"
+              [ngModelOptions]="{ standalone: true }"
+            >
               <mat-option *ngFor="let digit of digits" [value]="digit">
                 {{ digit }}
               </mat-option>
@@ -56,18 +60,22 @@
         </div>
 
         <div>
-            <mat-form-field appearance="outline" class="mat-input-width">
-              <mat-label>Math Operation</mat-label>
-              <mat-select class="options">
-                <mat-option
-                  *ngFor="let operation of operations"
-                  [value]="operation"
-                >
-                  {{ operation }}
-                </mat-option>
-                <mat-hint>Required</mat-hint>
-              </mat-select>
-            </mat-form-field>
+          <mat-form-field appearance="outline" class="mat-input-width">
+            <mat-label>Math Operation</mat-label>
+            <mat-select
+              class="options"
+              [(ngModel)]="selectedOperation"
+              [ngModelOptions]="{ standalone: true }"
+            >
+              <mat-option
+                *ngFor="let operation of operations"
+                [value]="operation"
+              >
+                {{ operation }}
+              </mat-option>
+              <mat-hint>Required</mat-hint>
+            </mat-select>
+          </mat-form-field>
         </div>
 
         <div>
@@ -91,7 +99,11 @@
         <div>
           <mat-form-field appearance="outline" class="mat-input-width">
             <mat-label>Number of Challenges</mat-label>
-            <mat-select class="options">
+            <mat-select
+              class="options"
+              [(ngModel)]="selectedChallenge"
+              [ngModelOptions]="{ standalone: true }"
+            >
               <mat-option
                 *ngFor="let challenge of challenges"
                 [value]="challenge"
@@ -104,25 +116,80 @@
         </div>
 
         <div class="button-container">
-            <button mat-raised-button matStepperNext color="primary" class="ml-2" (click)="startTimer()">
-              Play!
-            </button>
-          </div>
+          <button
+            mat-raised-button
+            matStepperNext
+            color="primary"
+            class="ml-2"
+            (click)="startTimer()"
+          >
+            Play!
+          </button>
+        </div>
       </mat-step>
 
-      <mat-step formGroupName="gameInformation" [stepControl]="formGroup1.get('gameInformation')">
+      <mat-step
+        formGroupName="gameInformation"
+        [stepControl]="formGroup1.get('gameInformation')"
+      >
+        <div class="page2">
+          <h3>{{ message }}</h3>
+          <h1>{{ number1 }} {{ convertedOperation }} {{ number2 }}</h1>
           <div>
-            <h3> {{message}} </h3>
-            <h2> {{number1}} {{equation}} {{number2}}</h2>
-            <button mat-raised-button>Turn it in!</button>
+            <mat-form-field appearance="outline" class="mat-input-width">
+              <mat-label>Answer Goes Here</mat-label>
+              <input
+                class="options"
+                id="answerInput"
+                type="text"
+                matInput
+                formControlName="answer"
+                [errorStateMatcher]="errorStateMatcher"
+              />
+            </mat-form-field>
           </div>
+          <div>
+            <input class="hidden1" type="checkbox" disabled checked />
+            <p>{{ victoryMessage }}</p>
+          </div>
+          <button
+            mat-raised-button
+            color="primary"
+            (click)="answerButtonClick()"
+          >
+            Turn it in!
+          </button>
+        </div>
+      </mat-step>
 
+      <mat-step
+        formGroupName="gameInformation"
+        [stepControl]="formGroup1.get('gameInformation')"
+      >
+        <div class="page3">
+            <h1>Your Results</h1>
+            <p>Challenged Answered Correctly Within Time: {{selectedChallenge}}</p>
+            <p>Average Time: seconds</p>
+            <p>Best Time: seconds</p>
 
+            <button
+            mat-raised-button
+            color="primary"
+          >
+            Play Again
+          </button>
+          <button
+            mat-raised-button
+            color="primary"
+          >
+            Exit
+          </button>
+
+        </div>
 
       </mat-step>
     </mat-horizontal-stepper>
   </form>
-
 </div>
 
 <!-- <mat-toolbar color="primary" class="expanded-toolbar">
