@@ -1,0 +1,25 @@
+body {
+  margin-left: 200px;
+}
+
+.importance-header {
+  padding: 20px;
+}
+
+h6 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #5346B3;
+  margin-left: 50px;
+}
+
+article {
+  column-count: 2;
+  width: 90%;
+}
+
+.description {
+  font-size: 16px;
+  margin-left: 50px;
+  width: 90%;
+}
