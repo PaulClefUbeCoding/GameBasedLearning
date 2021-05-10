@@ -181,6 +181,10 @@ export class MathgameComponent implements OnInit {
     this.seconds = 1;
   }
 
+  setIndex = (newIndex: number): void => {
+    this.myStepper.selectedIndex = newIndex;
+  };
+
 }
 
 export class InstantErrorStateMatcher implements ErrorStateMatcher {
