@@ -1,0 +1,33 @@
+body {
+  margin-left: 200px;
+}
+
+.description-header {
+  padding: 20px;
+}
+
+h6 {
+  font-size: 22px;
+  font-weight: bold;
+  color: #5346B3;
+  margin-left: 50px;
+}
+
+div {
+  align-items: center;
+  width: 90%;
+}
+
+.image {
+  float: left;
+  height: 250px;
+  width: 250px;
+  margin-left: 50px;
+  padding: 10px;
+}
+
+.description {
+  font-size: 16px;
+  margin-left: 50px;
+  width: 90%;
+}
