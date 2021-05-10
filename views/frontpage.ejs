@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Game Based Learning</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: rgb(50, 47, 246);
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 800px; /* only for demonstration, should be removed */
+  background: rgb(121, 121, 121);
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  background-image: url('https://sites.psu.edu/siowfa16/files/2016/09/635848794097552009-78721014_video-games-health-15v8hmt.jpg');
+  background-size: cover;
+  height: 800px; /* only for demonstration, should be removed */
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgb(50, 47, 246);
+  padding: 100px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Game Based Learning</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <h1 style="font-size:3vw"> <li><a href="description">Description!!</a></li></h1 style>
+        <h1 style="font-size:3vw"><li><a href="gameexample">Game Example</a></li></h1 style>
+        <!-- <h1 style="font-size:3vw"><li><a href="#">Extra</a></li></h1 style> -->
+    </ul>
+  </nav>
+  
+  <article>
+    <h1 style="font-size:3vw;color:#f1f1f1" >The future of Learning</h1>
+    <p style="color: #f1f1f1;">As society becomes more dependent on technology it also affects the learning environment.
+      To accommodate these changes it has adapt with it which leads to the implemantation of new devices.What we plan to 
+      incorporate is that we will use video games as way to teach the students.
+   </p>
+    <p><img src="https://cdn.videoplasty.com/gif/pc-games-icon-stock-gif-5529-384x216.gif?1574064262" alt="game picture" width="200" height="200" ></p>
+    
+  </article>
+</section>
+
+<footer>
+  <p></p>
+</footer>
+
+</body>
+</html>
