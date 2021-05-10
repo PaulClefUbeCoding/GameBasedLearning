@@ -56,6 +56,21 @@
         </div>
 
         <div>
+            <mat-form-field appearance="outline" class="mat-input-width">
+              <mat-label>Math Operation</mat-label>
+              <mat-select class="options">
+                <mat-option
+                  *ngFor="let operation of operations"
+                  [value]="operation"
+                >
+                  {{ operation }}
+                </mat-option>
+                <mat-hint>Required</mat-hint>
+              </mat-select>
+            </mat-form-field>
+        </div>
+
+        <div>
           <mat-form-field appearance="outline" class="mat-input-width">
             <mat-label>Timer (in seconds)</mat-label>
             <input

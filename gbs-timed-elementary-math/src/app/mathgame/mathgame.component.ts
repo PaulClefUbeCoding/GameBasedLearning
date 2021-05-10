@@ -42,6 +42,7 @@ export class MathgameComponent implements OnInit {
 
   digits: number[] = [1,2,3];
   challenges: number[] = [5, 10, 20];
+  operations: string[] = ['Addition', 'Subtraction', 'Multiplication', 'Division'];
   selectedDigit: number;
   selectedChallenge: number;
 
@@ -64,17 +65,18 @@ export class MathgameComponent implements OnInit {
     this.formGroup1 = new FormGroup ({
       gameInformation: new FormGroup({
         name: new FormControl(null,),
-        digits: new FormControl(null,),
+        digit: new FormControl(null,),
         timer: new FormControl(null, ),
-        challenges: new FormControl(null, ),
+        challenge: new FormControl(null, ),
+        operation: new FormControl(null, ),
       }),
     });
   }
 
   startTimer() {
     console.log("inside start timer");
-    console.log("Digit selected:" + this.formGroup1.value.gameInformation.digits);
-    console.log("Digit selected:" + this.formGroup1.value.gameInformation.challenges);
+    console.log("Digit selected:" + this.formGroup1.value.gameInformation.digit);
+    console.log("Digit selected:" + this.formGroup1.value.gameInformation.challenge);
     this.generateTheNumbers();
     this.seconds = this.formGroup1.value.gameInformation.timer;
     this.countDownTimer(); 
