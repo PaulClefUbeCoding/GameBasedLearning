@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Game Based Learning</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* Style the header */
+header {
+  background-color: rgb(50, 47, 246);
+  padding: 30px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+/* Create two columns/boxes that floats next to each other */
+nav {
+  float: left;
+  width: 30%;
+  height: 800px; 
+  background: rgb(121, 121, 121);
+  padding: 20px;
+}
+
+/* Style the list inside the menu */
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  background-color: #f1f1f1;
+  background-image: url('https://www.filamentgames.com/wp-content/uploads/2019/02/12-1.png');
+  background-size: cover;
+  height: 800px; 
+}
+
+/* Clear floats after the columns */
+section::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: rgb(50, 47, 246);
+  padding: 100px;
+  text-align: center;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <h2>Game Based Learning</h2>
+</header>
+
+<section>
+  <nav>
+    <ul>
+      <h1 style="font-size:3vw"><li><a href="/frontpage">Main Page</a></li></h1>
+      <h1 style="font-size:3vw"><li><a href="/gameexample">Game Example</a></li></h1>
+      <!-- <h1 style="font-size:3vw"><li><a href="#">Extra</a></li></h1> -->
+    </ul>
+  </nav>
+  
+  <article>
+    <h1 style="font-size:3vw;color:#858585" >How Does it Work</h1>
+    <p style="color:#858585">So Game based learning is where we get the concepts of what a video game does and we add concepts 
+    that had to do with teaching and learning. Playing the video game helps promote student engagement and
+    motivation to learn.
+    </p>
+    <h1 style="font-size:3vw;color:#858585" >How its Implemented</h1>
+    <p style="color:#858585">
+        The way we will make the game works is that we first had to decide on what will the game be played. After some
+        brainstorming we decided that the internet will be the best place to have the game. This allows for the game to 
+        be played on computers,tablets,phones and other electronic devices.
+    </p>
+    <p><img src="http://makingmovesincollege.com/wp-content/uploads/2015/08/electronics.jpg" alt="devices" width="200" height="200" ></p>
+    
+    
+  </article>
+</section>
+
+<footer>
+  <p></p>
+</footer>
+
+</body>
+</html>
