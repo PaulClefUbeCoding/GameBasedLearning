@@ -26,6 +26,10 @@
     font-size: 130%;
 }
 
+.choice {
+    margin: 0 5px 0 5px;
+}
+
 .heading2 {
     margin: auto;
     font-size: 110%;
@@ -34,3 +38,7 @@
 .navspacing {
     width:100%;
 }
+
+.spacer {
+    flex: 1 1 auto;
+  }

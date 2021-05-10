@@ -7,6 +7,8 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { FrontpageComponent } from './frontpage/frontpage.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 //Angular Material Imports
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatButtonModule } from '@angular/material/button';
@@ -52,6 +54,8 @@ import { Mathgamep3Component } from './mathgamep3/mathgamep3.component';
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
+    FormsModule,
+    ReactiveFormsModule,
     //Angular Material Module imports
     MatSidenavModule,
     MatButtonModule,

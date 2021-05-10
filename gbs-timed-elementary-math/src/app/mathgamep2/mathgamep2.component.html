@@ -1,1 +1,30 @@
-<p>mathgamep2 works!</p>
+<form id="form1" [formGroup]="formGroup1">
+
+    <mat-horizontal-stepper #stepper linear>
+
+        <mat-step
+            formGroupName="gameInformation"
+            [stepControl]="formGroup1.get('gameInformation')"
+        >
+            <h2 class="mat-display-1" style="margin-bottom: 32px">
+                Initializing Your Game
+            </h2>
+            <div>
+                <mat-form-field appearance="outline" class="mat-input-width">
+                    <mat-label>Name</mat-label>
+                    <input id="nameInput" type="text" matInput formControlName="name" [errorStateMatcher]="errorStateMatcher"/>
+                </mat-form-field>
+            </div>
+            
+            <div>
+                <mat-form-field appearance="outline" class="mat-input-width">
+                    <mat-label>Number of Digits</mat-label>
+                    <input id="digitsInput" type="range" formControlName="digits" min="0" max="3"/>
+                </mat-form-field>
+            </div>
+
+        </mat-step>
+    </mat-horizontal-stepper>
+   
+
+</form>
