@@ -132,6 +132,7 @@
         formGroupName="gameInformation"
         [stepControl]="formGroup1.get('gameInformation')"
       >
+      <ng-template matStepLabel>Game</ng-template>
         <div class="page2">
           <h3>{{ message }}</h3>
           <h1>{{ number1 }} {{ convertedOperation }} {{ number2 }}</h1>
@@ -166,6 +167,7 @@
         formGroupName="gameInformation"
         [stepControl]="formGroup1.get('gameInformation')"
       >
+      <ng-template matStepLabel>Results</ng-template>
         <div class="page3">
             <h1>Your Results</h1>
             <p>Challenged Answered Correctly Within Time: {{selectedChallenge}}</p>
