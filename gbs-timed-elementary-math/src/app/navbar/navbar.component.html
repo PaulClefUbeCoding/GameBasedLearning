@@ -1,0 +1,14 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav-content>
+        <mat-toolbar color="primary">
+            <span>Game-Based Learning</span>
+            <span class="spacer"></span>
+            <a class="choice" mat-list-item routerLink="" ><button class="navspacing" mat-raised-button>Home</button></a>
+            <a class="choice" mat-list-item routerLink="description-page"><button class="navspacing" mat-raised-button>What is it?</button></a>
+            <a class="choice" mat-list-item routerLink="importance-page"><button class="navspacing" mat-raised-button>Importance</button></a>
+            <a class="choice" mat-list-item routerLink="mathgame-page"><button class="navspacing" mat-raised-button>Mental Math Blitz</button></a>
+        </mat-toolbar>
+
+        <ng-content></ng-content>
+    </mat-sidenav-content>
+</mat-sidenav-container>

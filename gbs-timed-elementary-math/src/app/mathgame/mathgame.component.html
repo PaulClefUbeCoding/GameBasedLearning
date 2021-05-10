@@ -1,0 +1,131 @@
+<div class="container3">
+  <mat-toolbar color="primary" class="expanded-toolbar">
+    <span>
+      <button mat-button routerLink="/mathgame-page">{{ title }}</button>
+      <button mat-button routerLink="/mathgame-page">
+        <mat-icon>home</mat-icon>
+      </button>
+    </span>
+    <span class="spacer"></span>
+    <div fxLayout="row" fxShow="true" fxShow.gt-sm>
+      <button mat-button routerLink="">
+        <mat-icon>gamepad</mat-icon>
+        Play
+      </button>
+      <button mat-button routerLink="/">
+        <mat-icon>exit_to_app</mat-icon>
+        Exit
+      </button>
+    </div>
+  </mat-toolbar>
+
+  <form id="form1" [@myAnimation] [formGroup]="formGroup1">
+    <mat-horizontal-stepper #stepper linear>
+      <mat-step
+        formGroupName="gameInformation"
+        [stepControl]="formGroup1.get('gameInformation')"
+      >
+        <ng-template matStepLabel>Game Info</ng-template>
+        <h2 class="mat-display-1" style="margin-bottom: 32px">
+          Initializing Your Game
+        </h2>
+        <div>
+          <mat-form-field appearance="outline" class="mat-input-width">
+            <mat-label>Name</mat-label>
+            <input
+              class="options"
+              id="nameInput"
+              type="text"
+              matInput
+              formControlName="name"
+              [errorStateMatcher]="errorStateMatcher"
+            />
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline" class="mat-input-width">
+            <mat-label>Number of Digits</mat-label>
+            <mat-select class="options">
+              <mat-option *ngFor="let digit of digits" [value]="digit">
+                {{ digit }}
+              </mat-option>
+              <mat-hint>Required</mat-hint>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline" class="mat-input-width">
+            <mat-label>Timer (in seconds)</mat-label>
+            <input
+              class="options"
+              id="timerInput"
+              type="text"
+              matInput
+              formControlName="timer"
+              [errorStateMatcher]="errorStateMatcher"
+            />
+            <mat-hint>Required and 5-60 only</mat-hint>
+            <mat-error
+              >Only integer value of minumum of 5 to a maximum of 60!</mat-error
+            >
+          </mat-form-field>
+        </div>
+
+        <div>
+          <mat-form-field appearance="outline" class="mat-input-width">
+            <mat-label>Number of Challenges</mat-label>
+            <mat-select class="options">
+              <mat-option
+                *ngFor="let challenge of challenges"
+                [value]="challenge"
+              >
+                {{ challenge }}
+              </mat-option>
+              <mat-hint>Required</mat-hint>
+            </mat-select>
+          </mat-form-field>
+        </div>
+
+        <div class="button-container">
+            <button mat-raised-button matStepperNext color="primary" class="ml-2" (click)="startTimer()">
+              Play!
+            </button>
+          </div>
+      </mat-step>
+
+      <mat-step formGroupName="gameInformation" [stepControl]="formGroup1.get('gameInformation')">
+          <div>
+            <h3> {{message}} </h3>
+            <h2> {{number1}} {{equation}} {{number2}}</h2>
+            <button mat-raised-button>Turn it in!</button>
+          </div>
+
+
+
+      </mat-step>
+    </mat-horizontal-stepper>
+  </form>
+
+</div>
+
+<!-- <mat-toolbar color="primary" class="expanded-toolbar">
+    <span>
+        <button mat-button routerLink="/mathgame-page">{{title}}</button>
+        <button mat-button routerLink="/mathgame-page"><mat-icon>home</mat-icon></button>
+    </span>
+    <span class="spacer"></span>
+    <div fxLayout="row" fxShow="true" fxShow.gt-sm>
+        <button mat-button routerLink="">
+            <mat-icon>gamepad</mat-icon>
+            Play
+        </button>
+        <button mat-button routerLink="/">
+            <mat-icon>exit_to_app</mat-icon>
+            Exit
+        </button>
+    </div>
+</mat-toolbar>
+<app-mathgamep2 *ngIf="isViewable"></app-mathgamep2>
+<app-mathgamep3 *ngIf="!isViewable"></app-mathgamep3> -->

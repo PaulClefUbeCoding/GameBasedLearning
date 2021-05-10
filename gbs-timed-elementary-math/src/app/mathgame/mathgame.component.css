@@ -1,0 +1,61 @@
+@import "~@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+body {
+    margin: 0;
+    font-family: sans-serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+.expanded-toolbar {
+    justify-content: space-between;
+    align-items: center;
+  }
+
+.heading {
+    margin: auto;
+    font-size: 130%;
+}
+
+.choice {
+    margin: 0 5px 0 5px;
+}
+
+.heading2 {
+    margin: auto;
+    font-size: 110%;
+}
+
+.navspacing {
+    width:100%;
+}
+
+.spacer {
+    flex: 1 1 auto;
+  }
+
+
+body {
+    background: -webkit-linear-gradient(left, #0072ff, #00c6ff);
+}
+
+.mat-input-width {
+    width: 25%;
+  }
+  
+@media only screen and (max-width: 600px) {
+    .mat-input-width {
+        width: 100%;
+    }
+}
+
+.options {
+    font-size: 15px;
+    margin: 0 0 0 0;
+}
+
+.container3 {
+    margin: 0 0% 0 0%;
+}
