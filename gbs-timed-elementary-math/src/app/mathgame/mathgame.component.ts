@@ -66,14 +66,15 @@ export class MathgameComponent implements OnInit {
         name: new FormControl(null,),
         digits: new FormControl(null,),
         timer: new FormControl(null, ),
+        challenges: new FormControl(null, ),
       }),
     });
   }
 
   startTimer() {
     console.log("inside start timer");
-    console.log("Digit selected:" + this.selectedDigit);
-    console.log("Digit selected:" + this.selectedChallenge);
+    console.log("Digit selected:" + this.formGroup1.value.gameInformation.digits);
+    console.log("Digit selected:" + this.formGroup1.value.gameInformation.challenges);
     this.generateTheNumbers();
     this.seconds = this.formGroup1.value.gameInformation.timer;
     this.countDownTimer(); 

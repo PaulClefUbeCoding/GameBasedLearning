@@ -46,7 +46,7 @@
         <div>
           <mat-form-field appearance="outline" class="mat-input-width">
             <mat-label>Number of Digits</mat-label>
-            <mat-select class="options" [(ngModel)]="selectedDigit">
+            <mat-select class="options">
               <mat-option *ngFor="let digit of digits" [value]="digit">
                 {{ digit }}
               </mat-option>
